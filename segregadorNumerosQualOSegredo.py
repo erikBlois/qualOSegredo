@@ -13,18 +13,25 @@ eliminadosSetima =[]
 sobreviventes =[]
 
 for numero in intervalo:
+  #primeira dica: o número não é multiplo de 4 
   if numero % 4 == 0 :
     eliminadosPrimeira.append(numero)
+  #segunda dica: o número não é divisivel por 5
   elif numero % 5 == 0 :
     eliminadosSegunda.append(numero)
+  #terceira dica: o número não é par
   elif numero % 2 == 0 :
     eliminadosTerceira.append(numero)
+  #quarta dica: o número é multiplo de 3
   elif numero % 3 != 0 :
     eliminadosQuarta.append(numero)
+  #quinta dica: o número não é divisivel por 9
   elif numero % 9 == 0 :
     eliminadosQuinta.append(numero)
+  #sexta dica: o resto da divisão por 5 é 2
   elif numero % 5 != 2 :
     eliminadosSexta.append(numero)
+  #setima dica: a soma dos algarimos é impar 
   else:
     unidade = numero % 10
     dezena = (numero % 100) // 10
